@@ -67,7 +67,34 @@ ReSharper - has faster and more powerful test runner -
 
 Rider - cross platform IDE - fast IDE and fast test runner
 
+=============
+Using NUnit in Visual Studio
+=============
 
+If not using resharper then in package manager console,
+	install-package NUnit 
+	install-package NUnit3TestAdapter
+
+Resharper or Rider already have NUnit as default Test Runner
+
+==============
+What is Test-driven Development (TDD)
+==============
+
+Approach to build software, with TDD you write your tests before writing the production code
+
+1. Write a failing test because you don't have any app code ot make it pass
+2. Write the simplest code to make the test pass (don't over engineer)
+3. Refactor if necessary
+
+Benefits of TDD
+- Testable Source Code
+- Full Coverage by Tests - can refactor, deploy with confidence
+- Simpler Implementation - if pass all test, no need to write more code, if need requirement start back at #1
+
+Code First - start with application code then write test
+
+Master fundamentals of testing then go into TDD
 
 
 
