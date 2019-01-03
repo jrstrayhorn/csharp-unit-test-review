@@ -96,6 +96,74 @@ Code First - start with application code then write test
 
 Master fundamentals of testing then go into TDD
 
+#2 - Fundamentals of Unit Testing
 
+==================
+Characteristics of Good Unit Tests
+==================
+
+- Good Unit Tests
+	- First-class citizens (all best practices for writing code should be for test)
+	- Each test should have own responsibility and less than 10 lines of code (clean and refactor as necessary)
+	- clean, readable and maintainble
+	- No logic, no if, else, foreach, loops, switch, etc
+	- Isolated (test methods should not call each other or assume state)
+	- Not too specific/general
+
+==================
+What to Test and What Not To Test
+==================
+
+Methods with more than 10 lines of code is test to code
+
+Unit testing and clean code goes hand and hand
+
+Test the outcome of a method
+
+Query
+	return some value (role)
+	should write test and verify that the write value is being returned
+		should test all execution path, each one has right value
+
+Command
+	role - performs action
+	changing state in memory, database, web api, etc - making a change in system
+	this may return a value
+		should test the outcome of method, if state change, test that given object is in right state
+		if result talk to external resource, make sure right calls to external dependencies
+
+DONT TEST
+	Language features 
+		simple c# property bag - don't set, read and test that
+	3rd-party code
+		entity framework, don't write test around their method
+		only test your code!
+
+=============
+Naming and Organising Test
+=============
+
+Test Projects (each project should have a unit test project)
+	example: TestNinja / TestNinja.UnitTests (should be separate from integration tests)
+
+Test Classes
+	a test class for each production class in code
+	example: Reservation / ReservationTests
+
+Test Method
+	a test method Number of Tests >= # of execution path
+	name of test should clearly specify the business rule you're testing
+
+Bad Tests
+	Test1()
+	SaveCustomerTest()
+	GetMovie()
+
+Good Test Methods Name
+
+[MethodName]_[Scenario]_[ExpectedBehavior]
+
+If method is too large, in order to not pollute the test class, extract test methods into separate class like
+	Reservation_CanBeCancelledByTests
 
 
