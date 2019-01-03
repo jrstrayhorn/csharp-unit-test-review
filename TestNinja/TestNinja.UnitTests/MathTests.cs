@@ -12,7 +12,7 @@ namespace TestNinja.UnitTests
     {
         private Math _math;
         // SetUp
-        // TearDown
+        // TearDown - used more with integration testing
 
         [SetUp]
         public void SetUp()
