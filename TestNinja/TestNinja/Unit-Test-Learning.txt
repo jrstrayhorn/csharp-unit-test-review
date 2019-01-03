@@ -1,0 +1,74 @@
+Code w/ Mosh - Unit Testing for C# Developers
+=================================================
+
+Benefits of Unit Tests
+	Code Documentation!!
+	Refactoring with Confidence
+
+Types of Tests
+
+- Unit - tests a unit of an application without its external dependencies
+	- cheap to write
+	- execute fast
+	- no files, no database, no web services
+	- don't give a lot of confidence of reliability of application
+
+- Integration
+	- tests the application with its external dependecies
+	- with files, database, etc
+	- take longer to execute (read/write to db)
+	- give more confidence in health of application
+	
+- End-to-end
+	- drives an application through its UI
+	- selinium is a tool that does this
+	- give you the greatest confidence
+	- problem 1: very slow because you have ot launch application, login, submit form, see results
+	- problem 2: very brittle
+
+Test Pyramid
+Should write all of them
+
+Most tests should be unit tests (becvause easy to write)
+
+Next should have some Integration tests (no ui)
+
+Should write very few e2e test for only the key parts of UI, only happy path
+
+Unit tests are great to write for quickly testing:
+	- logic/calculations
+	- conditional statements
+	- loops
+	- methods with complex logic or calculations
+	- Calculate functions - can test all execution paths of method
+
+Integration tests are better if application does a lot of just reading and writing from database
+
+Takeaways
+- Favour unit tests to e2e tests.
+- Cover unit test gaps with integration tests.
+- Use e2e tests sparingly. (only key functions of application)
+
+Need a testing framework to write tests
+
+NUnit - newest
+MSTest - mS 
+xUnit - gained more popularity
+
+Give utility library to write test and test runner that runs the test.
+
+Focus on the fundamentals not the tooling
+
+Start with MSTest
+
+Install NUnit later - longer history, more elegant
+
+ReSharper - has faster and more powerful test runner - 
+
+Rider - cross platform IDE - fast IDE and fast test runner
+
+
+
+
+
+
