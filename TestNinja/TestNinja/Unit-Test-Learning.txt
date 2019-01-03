@@ -166,4 +166,4 @@ Good Test Methods Name
 If method is too large, in order to not pollute the test class, extract test methods into separate class like
 	Reservation_CanBeCancelledByTests
 
-
+Write test like black box, what are different possibles? without looking at implementation
