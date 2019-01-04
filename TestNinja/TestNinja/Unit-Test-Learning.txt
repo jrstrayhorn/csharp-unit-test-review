@@ -217,4 +217,10 @@ Focus on delivering quality software with less defects
 
 FACT - Building software is costly, either upfront with writing unit tests, or later with massive bugs
 
+******************************
+Core Unit Testing Techniques *
+******************************
 
+======================
+Testing Strings
+======================
