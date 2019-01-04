@@ -167,3 +167,54 @@ If method is too large, in order to not pollute the test class, extract test met
 	Reservation_CanBeCancelledByTests
 
 Write test like black box, what are different possibles? without looking at implementation
+
+==============
+Ignoring Tests
+==============
+
+Don't delete or comment out tests just to get to pass
+
+===============
+Writing Trustworthy Tests
+===============
+
+What is a trustworthy test?
+
+One that can be relied upon.. if success good, if faile something is wrong with code
+
+How?
+
+#1 - Test-driven Development
+	Write a failing test.
+	Write the simplest code to make the test pass.
+
+Untrustworthy - you are testing the wrong things - sometimes happen w/ code-first approach
+
+Why to check if test is trustworthy or not
+	in production code, create a bug on line that test should be testing
+		if test still passes then it is not a trustworthy test (test has a bug)
+
+code-first, test-later approach
+
+- run tests if passes
+- go production code, make change on line that makes test pass (make a bug)
+- if you change the line, and the test still passes
+- then test is not testing the right thing
+
+Write trustworthy tests that bring value
+
+be pragmatic - all apps should have a level of automated tests
+
+Cost of a Software Bug
+
+- $100 - Found in Requirements Gathering
+- $1,500 - Found in QA Testing
+- $10,000 - Found in Production
+
+Unit Testing - The Sensitivity Problem - butunclebob.com
+
+Focus on delivering quality software with less defects
+
+FACT - Building software is costly, either upfront with writing unit tests, or later with massive bugs
+
+
