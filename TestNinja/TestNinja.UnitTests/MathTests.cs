@@ -40,5 +40,29 @@ namespace TestNinja.UnitTests
 
             Assert.That(result, Is.EqualTo(expectedResult));
         }
+
+        [Test]
+        public void GetOddNumbers_LimitIsGreaterThanZero_ReturnOddNumbersUpToLimit()
+        {
+            var result = _math.GetOddNumbers(5);
+
+            // most general - ok if you just want to know if something is there
+            //Assert.That(result, Is.Not.Empty);
+
+            // more specific - check for number of items
+            //Assert.That(result.Count(), Is.EqualTo(3));
+
+            // another general way - existance of certain items in array but don't care about order
+            //Assert.That(result, Does.Contain(1));
+            //Assert.That(result, Does.Contain(3));
+            //Assert.That(result, Does.Contain(5));
+
+            // cleaner way - doesnt care about order just checks if items are there
+            Assert.That(result, Is.EquivalentTo(new[] { 1, 3, 5 }));
+
+            //Assert.That(result, Is.Ordered);
+
+            //Assert.That(result, Is.Unique);
+        }
     }
 }
